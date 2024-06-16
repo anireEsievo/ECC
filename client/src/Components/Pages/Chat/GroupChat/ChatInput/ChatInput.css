@@ -1,0 +1,13 @@
+.chatInput{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 28%;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    gap: 2%;
+    padding-top: 0.7rem;
+    border-top: 0.1rem solid var(--col-1);
+    background-color: white;
+    z-index: 10;
+}

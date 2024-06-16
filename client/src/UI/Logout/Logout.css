@@ -1,0 +1,44 @@
+.logout{
+    width: auto;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.7rem;
+    align-items: center;
+    transform: translateY(-50%);
+}
+.logOutControls{
+    width:auto;
+    background-color: white;
+    z-index: 10;
+    box-shadow: var(--box-shadow);
+    border-radius: 100%;
+    cursor: pointer;
+}
+.buttonBlock.open{
+    animation: openLogout 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.buttonBlock.close{
+    animation: closeLogout 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+
+}
+
+@keyframes openLogout {
+    from {
+        transform: translateX(calc(100% + 520px));
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes closeLogout {
+    from {
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(calc(100% + 520px));
+    }
+}

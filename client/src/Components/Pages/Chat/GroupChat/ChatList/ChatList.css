@@ -1,0 +1,13 @@
+.chatList{
+    width: 100%;
+    height: 100%;
+    padding: 4.5rem 0 16rem 0;
+    overflow-y: scroll;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.chatList::-webkit-scrollbar{
+    width: 0;
+}

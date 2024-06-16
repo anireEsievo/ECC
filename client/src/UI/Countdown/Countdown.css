@@ -1,0 +1,40 @@
+.countdown{
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+    font-family: var(--ff-poppins);
+}
+.countdown h4{
+    color: var(--root-color)
+}
+.countdown h4 span{
+    display: block;
+}
+.countdown p{
+    color: rgba(0, 0, 0, 0.868);
+    font-weight: 600;
+}
+.countdownSpinner{
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+}
+.spinner {
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 2px solid #f3f3f3; 
+    border-top: 2px solid var(--col-1);
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

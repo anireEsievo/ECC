@@ -1,0 +1,171 @@
+/* RESETS */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-j-sans);
+}
+main{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: var(--col-3);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+input:focus, textarea:focus{
+  outline: none;
+}
+ul{
+  list-style: none;
+}
+button{
+  border: none;
+  cursor:pointer;
+}
+a{
+  text-decoration: none;
+}
+
+
+
+/* APP-STYLING-VARIABLES */
+:root{
+  /* FONT-FAMILIES */
+  --ff-j-sans: "Josefin Sans", sans-serif;
+
+  /* FONT SIZES */
+
+
+  /* FONT-WEIGHTS */
+  --fw-600: 600;
+
+
+  /* COLORS */
+  --shadow-col: rgba(0, 0, 0, 0.129);
+  --error-col: rgba(255, 0, 0, 0.901);
+  --success-col: green;
+  --white: white;
+  --col-1: #0C4A60;
+  --col-2: #EF6C33;
+  --col-3: #ABDFF1;
+  --col-4: #E1DDDB;
+  --col-5: rgba(255, 255, 255, 0.073);
+
+  /* SHADOWS */
+  --box-shadow: 0px 2px 4px 2px var(--shadow-col);
+
+  /* -->* SPACINGS *<-- */
+  /* Paddings */
+  /* --pd-outer: 0 5%; */
+
+  /* Margins */
+}
+
+/* UTILITY CLASSES */
+.card{
+  width: 90%;
+  height: 95%;
+  max-width: 1400px;
+  background-color: var(--white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.grid-row{
+  display:grid;
+  grid-template-columns: 40% 60%;
+}
+.shake{
+  animation: shake 0.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+.defaultText{
+  text-align: center;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  top: 45%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  position: absolute; 
+}
+
+/* OTHERS */
+.authForm{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--col-5);
+}
+.authForm form{
+  width: 90%;
+  /* margin:auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+.authForm a{
+  font-weight: 600;
+  color: var(--col-2);
+}
+.authForm button{
+  margin-top: 2rem;
+}
+.chatIcon--container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--col-1);
+  border-radius: 1rem 0 0 1rem;
+}
+.chatIcon{
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  position:absolute;
+}
+.mainApp{
+  width:100%;
+  height:100%;
+  position: relative;
+}
+
+/* ANIMATIONS*/
+/*
+  What we wanna achieve is components coming in from all sides even in the chat list.
+*/
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10%, 90% { transform: translateX(-5px); }
+  20%, 80% { transform: translateX(5px); }
+  30%, 50%, 70% { transform: translateX(-5px); }
+  40%, 60% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+@media screen and (max-width:1000px) {
+  .grid-row{
+    display: block;
+    position: relative
+  }
+  .card{
+    position: relative;
+  }
+  .chatIcon--container{
+    display: none;
+  }
+}

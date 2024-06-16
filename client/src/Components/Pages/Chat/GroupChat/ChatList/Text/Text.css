@@ -1,0 +1,63 @@
+.textContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.textContainer.isMe{
+    flex-direction: row-reverse;
+}
+.textContainer.text.receiver{
+    flex-direction: row;
+}
+.text{
+    min-width: 85px;
+    max-width: 190px;
+    padding: 0.9rem;
+    line-height: 1.25rem;
+    position: relative;
+}
+.text p{
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+.text.text.isMe p{
+    color: black;
+}
+.text.isMe{
+    right: 15px;
+    float: right;
+    border-radius: 0.8rem 0 0.8rem 0.8rem;
+    background-color: var(--col-3);
+}
+.text.isMe::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 25px solid transparent; 
+    border-left: 50px solid var(--col-3);
+    position: absolute;
+    top: 0;
+    right: -15px;
+}
+.text.receiver{
+    border-radius:  0 0.8rem 0.8rem 0.8rem ;
+    background-color: var(--col-1);
+    float: left;
+    left: 15px;
+}
+.text.receiver::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; 
+    border-top: 25px solid var(--col-1);
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+.latencyBlock p span{
+    color: var(--col-2);
+    font-weight: 600;
+}

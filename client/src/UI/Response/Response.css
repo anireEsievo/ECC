@@ -1,0 +1,48 @@
+.response{
+    width: auto;
+    z-index: 1000;
+    position: fixed;
+    top: 50px;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    right: 0;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: white;
+}
+.response.success{
+    background-color: var(--success-col);
+}
+.response.processing{
+    background-color: var(--col-1);
+}
+.response.fail{
+    background-color: var(--error-col);
+}
+.response.valid{
+    animation: showResponse 1s cubic-bezier(0.23, 1, 0.320, 1) forwards;
+}
+.response.null{
+    display: none;
+}
+
+@keyframes showResponse {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-5%);
+    }
+}
+
+@keyframes hideResponse {
+    from{
+        transform: translateX(-5%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}

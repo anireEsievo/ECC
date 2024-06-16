@@ -1,0 +1,19 @@
+.fnc--btn{
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.7rem;
+    background-color: var(--col-2);
+    color: var(--white);
+    font-weight: var(--fw-600);
+    border: 0.1rem solid var(--col-2);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media (hover: hover){
+    .fnc--btn:hover{
+        color: var(--col-2);
+        background-color: white;
+        border-color: var(--col-2);
+    }
+}
